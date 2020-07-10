@@ -21,6 +21,11 @@ namespace LabFour
                     continue;
                 }
 
+                /*
+                 * Table format idea came from Microsoft documentation. 
+                 * Refer to https://docs.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting?redirectedfrom=MSDN
+                 */
+
                 Console.WriteLine("");
                 Console.WriteLine("{0,-9} {1,-9} {2,-9}", "Number", "Squared", "Cubed");
                 Console.WriteLine("{0,-9} {1,-9} {2,-9}", "======", "=======", "=====");
