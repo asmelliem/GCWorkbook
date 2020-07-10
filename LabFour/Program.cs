@@ -27,8 +27,8 @@ namespace LabFour
 
                 for (int currNum = 1; currNum <= number; currNum++)
                 {
-                    int square = currNum * currNum;
-                    int cubed = currNum * currNum * currNum;
+                    var square = currNum * currNum;
+                    var cubed = currNum * currNum * currNum;
                     Console.WriteLine("{0,-9} {1,-9} {2,-9}", currNum, square, cubed);
                 }
 
