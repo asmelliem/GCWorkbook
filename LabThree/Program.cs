@@ -4,13 +4,13 @@ namespace LabThree
 {
     public class Program
     {
+        
         public static void Main(string[] args)
         {
 
             Console.WriteLine("Please enter your name: ");
             var name = Console.ReadLine();
 
-            var cont = "";
             do
             {
                 Console.WriteLine("Enter a whole number between 1 and 100");
@@ -23,39 +23,24 @@ namespace LabThree
                     Console.WriteLine("You didn't enter a valid number");
                     Console.WriteLine("");
                     continue;
-                }
+                }                             
 
-                var numType = DetermineEvenOdd(number);                             
-
-                if (numType == "Even")
+                if (IsEven(number))
                 {
-                    var output = DetermineEvenOutput(number, name);
-                    Console.WriteLine(output);
+                    Console.WriteLine(DetermineEvenOutput(number, name));
                 }
                 else
                 {
-                    var output = DetermineOddOutput(number, name);
-                    Console.WriteLine(output);
+                    Console.WriteLine(DetermineOddOutput(number, name));                    
                 }                
 
                 Console.WriteLine("Would you like to continue? (y/n)");
-                cont = Console.ReadLine().ToUpper();
-
-            } while (cont == "Y");
+            } while (Console.ReadLine().ToUpper() == "Y");
         }
 
-        public static string DetermineEvenOdd(int value)
+        public static bool IsEven(int value)
         {
-            string numType;
-            if (value % 2 == 0)
-            {
-                numType = "Even";
-            }
-            else
-            {
-                numType = "Odd";
-            }
-            return numType;
+            return value % 2 == 0;            
         }
 
         public static string DetermineEvenOutput(int value, string name)
